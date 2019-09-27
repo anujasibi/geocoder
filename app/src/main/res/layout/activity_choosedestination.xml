@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".choosedestination">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/ne"
+        android:textSize="18sp"
+
+        android:text="Choose Destination"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:textColor="#fff"/>
+
+    <fragment
+        android:id="@+id/autocomplete_fragment"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/ne"
+        android:layout_height="wrap_content"
+        android:name=
+            "com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/txt111"
+        android:layout_marginTop="20dp"
+        android:text="Address"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/autocomplete_fragment"
+        android:gravity="center_vertical"
+        android:layout_height="20dp"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/txt"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="17sp"
+        android:textColor="#000"
+        android:layout_below="@+id/txt111"
+        android:gravity="center_vertical"
+        android:layout_height="30dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/addressET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt"
+        android:singleLine="true"
+        android:text="1600 Pennsylvania Ave NW Washington DC 20502" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Lat/Long"
+        android:id="@+id/addressButton"
+        android:layout_below="@+id/addressET"
+        android:layout_toEndOf="@+id/addressTV"
+        android:layout_marginTop="50dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/latLongTV"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/addressButton" />
+
+
+
+
+</RelativeLayout>
